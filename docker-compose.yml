@@ -1,0 +1,13 @@
+version: "3"
+services:
+  yolo:
+    image: ultralytics/yolov5:latest-arm64
+    platform: linux/arm64
+
+  yolo-server:
+    image: ultralytics/yolov5:latest-arm64
+    command: sh /app/start.sh
+    ports:
+      - '5001:5000'
+    volumes:
+      - '.:/app'
