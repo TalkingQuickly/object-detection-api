@@ -2,6 +2,8 @@
 
 This is a simple Flask wrapper around the Yolo V5 object detection model. An image can be provided via a POST request and a JSON response is returned containing details of the detected objects.
 
+If you're not on arm64 hardware you'll need to change references to `latest-arm64` to `latest`.
+
 ## Usage
 
 ```bash
